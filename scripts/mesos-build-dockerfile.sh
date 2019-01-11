@@ -2,8 +2,9 @@
 
 set -xe
 
-# This is the script used by ASF Jenkins to build and check Mesos for
-# a given OS and compiler combination.
+# This script is adapted from the following script used by ASF Jenkins to build
+# and check Mesos for a given OS and compiler combination:
+# https://github.com/apache/mesos/blob/master/support/docker-build.sh
 
 # Require the following environment variables to be set.
 : ${OS:?"Environment variable 'OS' must be set (e.g., OS=ubuntu:14.04)"}
