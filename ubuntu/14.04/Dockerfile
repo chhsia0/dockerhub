@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 RUN rm -rf /var/lib/apt/lists/*
 RUN apt-get update
 RUN apt-get install -y build-essential clang-3.5 git maven autoconf libtool software-properties-common
-RUN apt-get install -y python-dev python-six libcurl4-nss-dev libsasl2-dev libapr1-dev libsvn-dev libevent-dev libev-dev
+RUN apt-get install -y python-dev python-six libcurl4-nss-dev libsasl2-dev libapr1-dev libsvn-dev libevent-dev libev-dev libssl-dev
 RUN apt-get install -y wget curl sed
 RUN apt-get install -y openjdk-7-jdk
 RUN adduser --disabled-password --gecos '' mesos
