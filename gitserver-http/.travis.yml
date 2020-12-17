@@ -1,0 +1,21 @@
+sudo: required
+language: generic
+
+services:
+  - docker
+
+env:
+  - DOCKER_OPTS="-H tcp://0.0.0.0:2375"
+
+before_install:
+  - ./.travis/setup.sh
+
+install:
+  - make image
+
+script:
+  - make test
+
+notifications:
+  email: false
+
