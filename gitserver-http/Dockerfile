@@ -2,7 +2,7 @@ FROM nginx:alpine
 
 RUN set -x && \
   apk --update upgrade                                  &&  \
-  apk add git bash fcgiwrap spawn-fcgi wget             &&  \
+  apk add git git-daemon bash fcgiwrap spawn-fcgi wget  &&  \
 
   adduser git -h /var/lib/git -D                        &&  \
   adduser nginx git                                     &&  \
